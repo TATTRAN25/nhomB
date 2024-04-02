@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrudUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('dashboard', [CrudUserController::class, 'dashboard']);
+
+Route::get('update', [CrudUserController::class, 'updateUser'])->name('user.updateUser');
+Route::post('update', [CrudUserController::class, 'postUpdateUser'])->name('user.postUpdateUser');
 
 Route::get('/', function () {
     return view('welcome');
