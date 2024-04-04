@@ -33,11 +33,9 @@
                         @endif
                     </div>
 
-                <div class="form-group mb-3">
-                    <div class="text-right"> 
+                    <div class="form-group mb-3 d-flex justify-content-end"> <!-- Sử dụng lớp d-flex và justify-content-end để căn chỉnh nút sang phải -->
                         <button type="submit" class="btn btn-primary">Sửa</button>
                     </div>
-                </div>
 
                 </form>
             </div>

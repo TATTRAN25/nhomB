@@ -7,7 +7,7 @@
 <body>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
     <div class="container">
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 @guest
                     <li class="nav-item">
@@ -18,7 +18,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="">|Đăng ký</a>
+                        <a class="nav-link" href=""> | Đăng ký</a>
                     </li>
                 @endguest
             </ul>
