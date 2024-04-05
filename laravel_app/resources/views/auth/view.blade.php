@@ -1,12 +1,12 @@
 @extends('dashboard')
 
 @section('content')
-
-<div class="view border ms-auto">
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<div class="view border">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col">
-                <h3>Màn hình chi tiết</h3>
+                <h3 class="text-center">Màn hình chi tiết</h3>
                 <table>
                     <tr>
                         <td>Username</td>

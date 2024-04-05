@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CrudUserController extends Controller
 {
-
     public function viewUser(Request $request) {
         $user_id = $request->get('id');
         $user = User::find($user_id);
