@@ -9,6 +9,10 @@
                 <h3 class="text-center">Màn hình chi tiết</h3>
                 <table>
                     <tr>
+                        <td>ID</td>
+                        <td>{{ $carlos->id }}</td>
+                    </tr>
+                    <tr>
                         <td>Username</td>
                         <td>{{ $carlos->name }}</td>
                     </tr>
