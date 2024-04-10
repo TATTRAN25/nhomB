@@ -10,6 +10,6 @@ class CrudUserController extends Controller
     public function viewUser(Request $request) {
         $user_id = $request->get('id');
         $user = User::find($user_id);
-        return view('crud_user.view', ['carlos' => $user]);
+        return view('crud_user.view', ['user' => $user]);
     }
 }

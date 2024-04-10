@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lập trình web</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <title>Laravel app</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <!--HEADER-->
-    <header class="mb-3">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container text center">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="route('list')">Home|</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="route('login')">Đăng xuất</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!--HEADER-->
-
-    <!--MAIN-->
-    @yield('content')
-    <!--MAIN-->
-
-    <!--FOOTER-->
-    <footer class="bg-light mt-3">
-        <div class="border">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <p>Lập trình web @01/2024</p>
-                </div>
-            </div>
+<nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
+    <div class="container">
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav">
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> | Đăng xuất</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href=""></a>
+                    </li>
+                @endguest
+            </ul>
         </div>
-        </div>
-    </footer>
-    <!--FOOTER-->
+    </div>
+</nav>
+@yield('content')
+<footer class="footer fixed-bottom border-top">
+    <div class="container text-center">
+        <h5>Lập trình web @01/2024</h5>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

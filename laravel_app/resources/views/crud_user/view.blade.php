@@ -10,12 +10,12 @@
                 <table>
                     <tr>
                         <td>Username</td>
-                        <td>{{ $carlos->name }}</td>
+                        <td>{{ $user->name }}</td>
                     </tr>
 
                     <tr>
                         <td>Email</td>
-                        <td>{{ $carlos->email }}</td>
+                        <td>{{ $user->email }}</td>
                     </tr>
                 </table>
             </div>
