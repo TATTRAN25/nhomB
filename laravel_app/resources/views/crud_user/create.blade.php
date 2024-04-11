@@ -39,7 +39,7 @@
                                 @endif
                             </div>
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-dark" style="background-color: transparent; color: blue; border: 2px solid white;">Đã có tài khoản</button>
+                                <button type="submit" class="btn btn-dark" style="background-color: transparent; color: blue; border: 2px solid white;" href="{{ route('user.createUser') }}">Đã có tài khoản</button>
                                 <button type="submit" class="btn btn-dark">Đăng Ký</button>
                             </div>
                             </form>

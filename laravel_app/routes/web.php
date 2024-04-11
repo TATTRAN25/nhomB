@@ -34,6 +34,7 @@ Route::get('list', [CrudUserController::class, 'listUser'])->name('user.list');
 
 Route::get('view', [CrudUserController::class, 'viewUser'])->name('user.view');
 
+Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 Route::get('/', function () {
     return view('welcome');
 });

@@ -18,7 +18,7 @@
                         <ul class="navbar-nav">
                             @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="">Home</a>
+                                <a class="nav-link" href="{{ route('user.authUser') }}"> Laravel Crud</a>
                             </li>
 
                             <li class="nav-item">
@@ -30,7 +30,7 @@
                             </li>
                             @else
                             <li class="nav-item">
-                                <a class="nav-link" href=""> | Đăng xuất</a>
+                                <a class="nav-link" href="{{ route('signout') }}"> | Đăng xuất</a>
                             </li>
                             @endguest
                         </ul>
