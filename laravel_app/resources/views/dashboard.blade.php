@@ -12,12 +12,17 @@
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="">Home</a>
+<<<<<<< HEAD
                     </li>
                       <li class="nav-item">
                         <a class="nav-link" href=""> | Đăng nhập</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.createUser') }}"> | Đăng ký</a>
+=======
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> | Đăng xuất</a>
+>>>>>>> 1-laravel-10x/2-view
                     </li>
                 @else
                     <li class="nav-item">

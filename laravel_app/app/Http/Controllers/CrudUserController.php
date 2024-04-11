@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,3 +40,17 @@ class CrudUserController extends Controller
         return redirect("login");
     }
 }
+=======
+use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
+class CrudUserController extends Controller
+{
+    public function viewUser(Request $request) {
+        $user_id = $request->get('id');
+        $user = User::find($user_id);
+        return view('crud_user.view', ['user' => $user]);
+    }
+}
+>>>>>>> 1-laravel-10x/2-view

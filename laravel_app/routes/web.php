@@ -15,6 +15,7 @@ use App\Http\Controllers\CrudUserController;
 |
 */
 
+<<<<<<< HEAD
 Route::get('dashboard', [CrudUserController::class, 'dashboard']);
 
 <<<<<<< HEAD
@@ -40,6 +41,10 @@ Route::get('create', [CrudUserController::class, 'createUser'])->name('user.crea
 Route::post('create', [CrudUserController::class, 'postUser'])->name('user.postUser');
 
 >>>>>>> 1-laravel-10x/3-register
+=======
+Route::get('view', [CrudUserController::class, 'viewUser'])->name('user.view');
+
+>>>>>>> 1-laravel-10x/2-view
 Route::get('/', function () {
     return view('welcome');
 });
