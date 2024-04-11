@@ -9,10 +9,10 @@
     <div class="container">
 
         <div class="collapse navbar-collapse text-center" id="navbarNav">
-=======
+
         <div class="collapse navbar-collapse" id="navbarNav">
 >>>>>>> 1-laravel-10x/4-update
-=======
+
         <div class="collapse navbar-collapse text-center" id="navbarNav">
 >>>>>>> 1-laravel-10x/5-login
             <ul class="navbar-nav">
@@ -20,9 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">Home</a>
 
-=======
+
 >>>>>>> 1-laravel-10x/4-update
-=======
+
 >>>>>>> 1-laravel-10x/5-login
                     </li>
                       <li class="nav-item">
@@ -31,11 +31,11 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.createUser') }}"> | Đăng ký</a>
-=======
+
                     <li class="nav-item">
                         <a class="nav-link" href=""> | Đăng xuất</a>
 >>>>>>> 1-laravel-10x/2-view
-=======
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.createUser') }}"> | Đăng ký</a>
 >>>>>>> 1-laravel-10x/5-login
@@ -44,12 +44,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href=""></a>
 
-=======
+
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href=""> | Đăng ký</a>
 >>>>>>> 1-laravel-10x/4-update
-=======
+
 >>>>>>> 1-laravel-10x/5-login
                     </li>
                 @endguest
