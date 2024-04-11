@@ -2,7 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-<div class="view border">
+<div class="view">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,6 +18,7 @@
                         <td>{{ $user->email }}</td>
                     </tr>
                 </table>
+                <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn-edit">Chỉnh sửa</a>
             </div>
         </div>
     </div>
