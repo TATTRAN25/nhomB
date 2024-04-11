@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\CrudUserController;
@@ -16,11 +15,9 @@ use App\Http\Controllers\CrudUserController;
 |
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 Route::get('dashboard', [CrudUserController::class, 'dashboard']);
 
-<<<<<<< HEAD
 Route::get('login', [CrudUserController::class, 'login'])->name('login');
 Route::post('login', [CrudUserController::class, 'authUser'])->name('user.authUser');
 
@@ -33,10 +30,12 @@ Route::get('delete', [CrudUserController::class, 'deleteUser'])->name('user.dele
 
 Route::get('update', [CrudUserController::class, 'updateUser'])->name('user.updateUser');
 Route::post('update', [CrudUserController::class, 'postUpdateUser'])->name('user.postUpdateUser');
+=======
+
+>>>>>>> 1-laravel-10x/6-list
 
 Route::get('list', [CrudUserController::class, 'listUser'])->name('user.list');
 
-Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 
 =======
 Route::get('create', [CrudUserController::class, 'createUser'])->name('user.createUser');

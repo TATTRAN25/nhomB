@@ -92,6 +92,8 @@ class CrudUserController extends Controller
 >>>>>>> 1-laravel-10x/4-update
 
 
+=======
+>>>>>>> 1-laravel-10x/6-list
 use Hash;
 use Session;
 use App\Models\User;
@@ -131,5 +133,114 @@ class CrudUserController extends Controller
 
         return redirect("login")->withSuccess('Login details are not valid');
     }
+
 }
 >>>>>>> 1-laravel-10x/5-login
+=======
+
+    /**
+     * Registration page
+     */
+    public function createUser()
+    {
+        return view('crud_user.create');
+    }
+
+    /**
+     * User submit form register
+     */
+    public function postUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
+
+        $data = $request->all();
+        $check = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password'])
+        ]);
+
+        return redirect("login");
+    }
+
+    /**
+     * View user detail page
+     */
+    public function readUser(Request $request) {
+        $user_id = $request->get('id');
+        $user = User::find($user_id);
+
+        return view('crud_user.read', ['user' => $user]);
+    }
+
+    /**
+     * Delete user by id
+     */
+    public function deleteUser(Request $request) {
+        $user_id = $request->get('id');
+        $user = User::destroy($user_id);
+
+        return redirect("list")->withSuccess('You have signed-in');
+    }
+
+    /**
+     * Form update user page
+     */
+    public function updateUser(Request $request)
+    {
+        $user_id = $request->get('id');
+        $user = User::find($user_id);
+
+        return view('crud_user.update', ['user' => $user]);
+    }
+
+    /**
+     * Submit form update user
+     */
+    public function postUpdateUser(Request $request)
+    {
+        $input = $request->all();
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,id,'.$input['id'],
+            'password' => 'required|min:6',
+        ]);
+
+       $user = User::find($input['id']);
+       $user->name = $input['name'];
+       $user->email = $input['email'];
+       $user->password = $input['password'];
+       $user->save();
+
+        return redirect("list")->withSuccess('You have signed-in');
+    }
+
+    /**
+     * List of users
+     */
+    public function listUser()
+    {
+        if(Auth::check()){
+            $users = User::all();
+            return view('crud_user.list', ['users' => $users]);
+        }
+
+        return redirect("login")->withSuccess('You are not allowed to access');
+    }
+
+    /**
+     * Sign out
+     */
+    public function signOut() {
+        Session::flush();
+        Auth::logout();
+
+        return Redirect('login');
+    }
+}
+>>>>>>> 1-laravel-10x/6-list
