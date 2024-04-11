@@ -38,28 +38,13 @@ class CrudUserController extends Controller
 
         return redirect("login");
     }
-}
-=======
-use Illuminate\Http\Request;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
-class CrudUserController extends Controller
-{
     public function viewUser(Request $request) {
         $user_id = $request->get('id');
         $user = User::find($user_id);
         return view('crud_user.view', ['user' => $user]);
     }
-}
->>>>>>> 1-laravel-10x/2-view
-=======
 
-use App\Models\User;
-use Illuminate\Http\Request;
-
-class CrudUserController extends Controller
-{
     // Form upadate user page
     public function updateUser(Request $request)
     {
@@ -88,23 +73,6 @@ class CrudUserController extends Controller
 
         return redirect("list")->withSuccess("You have updated success");
     }
-}
->>>>>>> 1-laravel-10x/4-update
-
-
-=======
->>>>>>> 1-laravel-10x/6-list
-use Hash;
-use Session;
-use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
-/**
- * CRUD User controller
- */
-class CrudUserController extends Controller
-{
 
     /**
      * Login page
@@ -134,39 +102,6 @@ class CrudUserController extends Controller
         return redirect("login")->withSuccess('Login details are not valid');
     }
 
-}
->>>>>>> 1-laravel-10x/5-login
-=======
-
-    /**
-     * Registration page
-     */
-    public function createUser()
-    {
-        return view('crud_user.create');
-    }
-
-    /**
-     * User submit form register
-     */
-    public function postUser(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-        ]);
-
-        $data = $request->all();
-        $check = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password'])
-        ]);
-
-        return redirect("login");
-    }
-
     /**
      * View user detail page
      */
@@ -188,39 +123,6 @@ class CrudUserController extends Controller
     }
 
     /**
-     * Form update user page
-     */
-    public function updateUser(Request $request)
-    {
-        $user_id = $request->get('id');
-        $user = User::find($user_id);
-
-        return view('crud_user.update', ['user' => $user]);
-    }
-
-    /**
-     * Submit form update user
-     */
-    public function postUpdateUser(Request $request)
-    {
-        $input = $request->all();
-
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,id,'.$input['id'],
-            'password' => 'required|min:6',
-        ]);
-
-       $user = User::find($input['id']);
-       $user->name = $input['name'];
-       $user->email = $input['email'];
-       $user->password = $input['password'];
-       $user->save();
-
-        return redirect("list")->withSuccess('You have signed-in');
-    }
-
-    /**
      * List of users
      */
     public function listUser()
@@ -232,15 +134,5 @@ class CrudUserController extends Controller
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
-
-    /**
-     * Sign out
-     */
-    public function signOut() {
-        Session::flush();
-        Auth::logout();
-
-        return Redirect('login');
-    }
+    
 }
->>>>>>> 1-laravel-10x/6-list

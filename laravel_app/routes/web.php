@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\CrudUserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CrudUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,26 +30,10 @@ Route::get('delete', [CrudUserController::class, 'deleteUser'])->name('user.dele
 Route::get('update', [CrudUserController::class, 'updateUser'])->name('user.updateUser');
 Route::post('update', [CrudUserController::class, 'postUpdateUser'])->name('user.postUpdateUser');
 
->>>>>>> 1-laravel-10x/6-list
-
 Route::get('list', [CrudUserController::class, 'listUser'])->name('user.list');
-
-
-Route::get('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
-Route::post('create', [CrudUserController::class, 'postUser'])->name('user.postUser');
-
->>>>>>> 1-laravel-10x/3-register
 
 Route::get('view', [CrudUserController::class, 'viewUser'])->name('user.view');
 
->>>>>>> 1-laravel-10x/2-view
-
-Route::get('dashboard', [CrudUserController::class, 'dashboard']);
-
-Route::get('update', [CrudUserController::class, 'updateUser'])->name('user.updateUser');
-Route::post('update', [CrudUserController::class, 'postUpdateUser'])->name('user.postUpdateUser');
-
->>>>>>> 1-laravel-10x/4-update
 Route::get('/', function () {
     return view('welcome');
 });
