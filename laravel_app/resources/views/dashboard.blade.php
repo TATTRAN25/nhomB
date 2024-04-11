@@ -7,16 +7,24 @@
 <body>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
     <div class="container">
+<<<<<<< HEAD
         <div class="collapse navbar-collapse text-center" id="navbarNav">
+=======
+        <div class="collapse navbar-collapse" id="navbarNav">
+>>>>>>> 1-laravel-10x/4-update
             <ul class="navbar-nav">
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="">Home</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1-laravel-10x/4-update
                     </li>
                       <li class="nav-item">
                         <a class="nav-link" href=""> | Đăng nhập</a>
                     </li>
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.createUser') }}"> | Đăng ký</a>
 =======
@@ -27,6 +35,11 @@
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href=""></a>
+=======
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> | Đăng ký</a>
+>>>>>>> 1-laravel-10x/4-update
                     </li>
                 @endguest
             </ul>

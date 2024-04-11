@@ -1,6 +1,7 @@
 
 <?php
 
+use App\Http\Controllers\CrudUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CrudUserController;
 
@@ -15,6 +16,7 @@ use App\Http\Controllers\CrudUserController;
 |
 */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Route::get('dashboard', [CrudUserController::class, 'dashboard']);
 
@@ -45,6 +47,13 @@ Route::post('create', [CrudUserController::class, 'postUser'])->name('user.postU
 Route::get('view', [CrudUserController::class, 'viewUser'])->name('user.view');
 
 >>>>>>> 1-laravel-10x/2-view
+=======
+Route::get('dashboard', [CrudUserController::class, 'dashboard']);
+
+Route::get('update', [CrudUserController::class, 'updateUser'])->name('user.updateUser');
+Route::post('update', [CrudUserController::class, 'postUpdateUser'])->name('user.postUpdateUser');
+
+>>>>>>> 1-laravel-10x/4-update
 Route::get('/', function () {
     return view('welcome');
 });
