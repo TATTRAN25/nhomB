@@ -1,14 +1,14 @@
 @extends('dashboard')
 
 @section('content')
-    <main class="signup-form">
-        <div class="cotainer">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Màn hình đăng ký</h3>
-                        <div class="card-body">
-                            <form action="{{ route('user.postUser') }}" method="POST">
+<main class="signup-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header text-center">Màn hình đăng ký</h3>
+                    <div class="card-body">
+                        <form action="{{ route('user.postUser') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="username">Username</label>
@@ -39,14 +39,14 @@
                                 @endif
                             </div>
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-dark" style="background-color: transparent; color: blue; border: 2px solid white;" href="{{ route('user.createUser') }}">Đã có tài khoản</button>
+                                <a class="btn btn-dark" style="background-color: transparent; color: blue; border: 2px solid white;" href="{{ route('login') }}">Đã có tài khoản</a>
                                 <button type="submit" class="btn btn-dark">Đăng Ký</button>
                             </div>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 @endsection

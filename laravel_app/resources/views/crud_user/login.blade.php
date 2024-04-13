@@ -30,7 +30,7 @@
                                     Hoặc
                                 </div>
                                 <div class="text-center">
-                                    Bạn chưa có tài khoản, <a href="">Đăng ký</a>
+                                    Bạn chưa có tài khoản, <a href="{{ route('user.createUser') }}">Đăng ký</a>
                                 </div>
                                 <div>
                                     
